@@ -13,6 +13,7 @@ public class WelcomePageController {
     @FXML
     Button adminButton;
     
+    // go to admin page
     @FXML
     private void goToAdminPage() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginFormAdmin.fxml"));
