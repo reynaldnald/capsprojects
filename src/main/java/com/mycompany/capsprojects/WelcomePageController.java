@@ -11,16 +11,27 @@ import javafx.stage.Stage;
 public class WelcomePageController {
     
     @FXML
-    Button adminButton;
-    
-    // go to admin page
+    private Button adminButton;
     @FXML
-    private void goToAdminPage() throws IOException {
+    private Button agentButton;
+    
+    @FXML
+    private void goToAdminLogin() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginFormAdmin.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         
         Stage stage = (Stage) adminButton.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void goToAgentLogin() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginFormAgent.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        
+        Stage stage = (Stage) agentButton.getScene().getWindow();
         stage.setScene(scene);
         stage.show();
     }

@@ -6,6 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.capsprojects.WelcomePageController">
+
    <children>
       <Text layoutX="478.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER">
          <font>
@@ -17,12 +18,12 @@
             <Font name="Arial" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="agentButton" layoutX="397.0" layoutY="342.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="428.0" style="-fx-background-color: #398A45; -fx-background-radius: 10;" text="Agent" textFill="WHITE">
+      <Button fx:id="agentButton" layoutX="397.0" layoutY="342.0" mnemonicParsing="false" onAction="#goToAgentLogin" prefHeight="64.0" prefWidth="428.0" style="-fx-background-color: #398A45; -fx-background-radius: 10;" text="Agent" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button fx:id="adminButton" layoutX="396.0" layoutY="452.0" mnemonicParsing="false" onAction="#goToAdminPage" prefHeight="64.0" prefWidth="428.0" style="-fx-background-color: #29539A; -fx-background-radius: 10;" text="Admin" textFill="WHITE">
+      <Button fx:id="adminButton" layoutX="396.0" layoutY="452.0" mnemonicParsing="false" onAction="#goToAdminLogin" prefHeight="64.0" prefWidth="428.0" style="-fx-background-color: #29539A; -fx-background-radius: 10;" text="Admin" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
