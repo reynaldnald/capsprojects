@@ -12,64 +12,71 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="336.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="241.0" layoutY="-2.0" prefHeight="345.0" prefWidth="332.0" style="-fx-background-color: #398A45;">
+      <Pane layoutX="537.0" layoutY="-2.0" prefHeight="772.0" prefWidth="664.0" style="-fx-background-color: #398A45;">
          <children>
-            <Text fill="WHITE" layoutX="136.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password?" wrappingWidth="76.44253540039062">
+            <Button fx:id="button" layoutX="119.0" layoutY="431.0" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #29539A; -fx-border-radius: 10;" text="Login" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font name="Arial" size="9.0" />
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="117.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login - Agent" wrappingWidth="339.1151510606279">
+               <font>
+                  <Font name="Arial Bold" size="50.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="63.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you have an account?" wrappingWidth="142.77304194829367">
+            <TextField layoutX="119.0" layoutY="276.0" prefHeight="42.0" prefWidth="414.0" promptText="Enter your Agent number">
                <font>
-                  <Font name="Arial" size="10.0" />
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <CheckBox layoutX="403.0" layoutY="440.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="130.0" text="Remember  me" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <Text fill="WHITE" layoutX="274.0" layoutY="562.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password?" wrappingWidth="123.37588500976562">
+               <font>
+                  <Font name="Arial" size="15.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="183.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Account" wrappingWidth="115.97033809087179">
+            <Text fill="WHITE" layoutX="175.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you have an account?" wrappingWidth="176.90640376469992">
                <font>
-                  <Font name="Arial Bold" size="10.0" />
+                  <Font name="Arial" size="15.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="47.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter you crendentials to access your account " wrappingWidth="178.77304194829367">
+            <Text fill="WHITE" layoutX="353.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Account" wrappingWidth="134.10369990727804">
                <font>
-                  <Font name="Arial" size="10.0" />
+                  <Font name="Arial Bold" size="15.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="47.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Number" wrappingWidth="101.04425048828125">
+            <Text fill="WHITE" layoutX="119.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter you crendentials to access your account " wrappingWidth="417.7063305225124">
                <font>
-                  <Font name="Arial Bold" size="12.0" />
+                  <Font name="Arial" size="20.0" />
                </font>
             </Text>
-            <PasswordField layoutX="47.0" layoutY="193.0" prefHeight="25.0" prefWidth="234.0" promptText="Enter your password" />
+            <PasswordField layoutX="119.0" layoutY="367.0" prefHeight="42.0" prefWidth="414.0" promptText="Enter your password">
+               <font>
+                  <Font size="15.0" />
+               </font></PasswordField>
+            <Text fill="WHITE" layoutX="119.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Number" wrappingWidth="147.61310665653264">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="119.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="104.0">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
-      <Button fx:id="button" layoutX="290.0" layoutY="229.0" onAction="handleButtonAction" prefHeight="20.0" prefWidth="70.0" style="-fx-background-color: #29539A;" text="Login" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="10.0" />
-         </font>
-      </Button>
-      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Text fill="WHITE" layoutX="286.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login - Agent" wrappingWidth="185.51523650984666">
-         <font>
-            <Font name="Arial Bold" size="23.0" />
-         </font>
-      </Text>
-      <TextField layoutX="289.0" layoutY="136.0" prefHeight="26.0" prefWidth="233.0" promptText="Enter your Agent number" />
-      <Text fill="WHITE" layoutX="288.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="63.0">
-         <font>
-            <Font name="Arial Bold" size="12.0" />
-         </font>
-      </Text>
-      <CheckBox layoutX="453.0" layoutY="230.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" text="Remember  me" textFill="WHITE">
-         <font>
-            <Font size="8.0" />
-         </font>
-      </CheckBox>
-      <ImageView fitHeight="52.0" fitWidth="301.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="205.0" fitWidth="449.0" layoutX="46.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../Downloads/logo.png" />
+            <Image url="@../../../image/logoname.png" />
          </image>
       </ImageView>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
    </children>
 </AnchorPane>
