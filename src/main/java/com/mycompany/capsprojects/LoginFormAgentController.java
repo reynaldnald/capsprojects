@@ -20,7 +20,7 @@ public class LoginFormAgentController {
     
     @FXML
     private void goToDashboard() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomePage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DashboardPage.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         
