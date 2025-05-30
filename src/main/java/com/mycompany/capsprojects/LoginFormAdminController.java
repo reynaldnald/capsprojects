@@ -30,7 +30,7 @@ public class LoginFormAdminController {
     }
     @FXML
     private void goToAdminSignIn() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("CreateAccountAdmit.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CreateAccountAdmin.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         
