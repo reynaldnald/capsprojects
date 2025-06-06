@@ -15,7 +15,7 @@
    <children>
       <Pane layoutX="537.0" layoutY="-2.0" prefHeight="772.0" prefWidth="664.0" style="-fx-background-color: #398A45;">
          <children>
-            <Button fx:id="agentLoginButton" layoutX="119.0" layoutY="431.0" onAction="#goToDashboard" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #29539A; -fx-border-radius: 10;" text="Login" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="agentLoginButton" layoutX="119.0" layoutY="431.0" onAction="#signIn" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #29539A; -fx-border-radius: 10;" text="Login" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -25,7 +25,7 @@
                   <Font name="Arial Bold" size="50.0" />
                </font>
             </Text>
-            <TextField layoutX="119.0" layoutY="276.0" prefHeight="42.0" prefWidth="414.0" promptText="Enter your Agent number">
+            <TextField fx:id="agentNumberTxt" layoutX="119.0" layoutY="276.0" prefHeight="42.0" prefWidth="414.0" promptText="Enter your Agent number">
                <font>
                   <Font size="15.0" />
                </font>
@@ -55,7 +55,7 @@
                   <Font name="Arial" size="20.0" />
                </font>
             </Text>
-            <PasswordField layoutX="119.0" layoutY="367.0" prefHeight="42.0" prefWidth="414.0" promptText="Enter your password">
+            <PasswordField fx:id="passwordTxt" layoutX="119.0" layoutY="367.0" prefHeight="42.0" prefWidth="414.0" promptText="Enter your password">
                <font>
                   <Font size="15.0" />
                </font></PasswordField>
