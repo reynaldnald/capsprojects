@@ -64,7 +64,7 @@ public class LoginFormAdminController {
                     response.append(line.trim());
                 }
             }
-            
+            System.out.print(response);
             if(status == 200) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("DashboardPage.fxml"));
             Parent root = loader.load();
