@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.capsprojects.EmailVerificationController">
    <children>
       <Pane prefHeight="400.0" prefWidth="700.0">
          <children>
@@ -18,18 +18,18 @@
                   <Image url="@../../../image/logo.png" />
                </image>
             </ImageView>
-            <TextField layoutX="120.0" layoutY="213.0" prefHeight="52.0" prefWidth="461.0" />
+            <TextField fx:id="otpTxt" layoutX="120.0" layoutY="213.0" prefHeight="52.0" prefWidth="461.0" />
             <Label layoutX="257.0" layoutY="98.0" text="OTP Verification">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="218.0" layoutY="134.0" text="An OTP link has been sent to [user_email].">
+            <Label layoutX="218.0" layoutY="134.0" prefHeight="21.0" prefWidth="267.0" text="An OTP link has been sent to [user_email].">
                <font>
                   <Font name="Segoe UI Light" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="253.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Verify OTP" />
+            <Button fx:id="verifyButton" layoutX="253.0" layoutY="320.0" mnemonicParsing="false" onAction="#verifyOTP" prefHeight="40.0" prefWidth="200.0" text="Verify OTP" />
             <Label layoutX="196.0" layoutY="162.0" text="Enter the code below to verify your email address.">
                <font>
                   <Font name="Segoe UI Light" size="15.0" />

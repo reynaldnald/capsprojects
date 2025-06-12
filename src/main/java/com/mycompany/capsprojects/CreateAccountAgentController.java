@@ -66,22 +66,13 @@ public class CreateAccountAgentController {
                 response.append(line.trim());
             }
         }
-            if(status == 200) {
-                showAlert(AlertType.CONFIRMATION, "Account Created Successfully");
-            }
-            else if(status == 400){
-                showAlert(AlertType.ERROR, "ID number not found or invalid");
-            }
-            else {
-                showAlert(AlertType.ERROR, "Error Occured");
+            switch (status) {
+                case 200 -> showAlert(AlertType.CONFIRMATION, "Account Created Successfully!");
+                case 400 -> showAlert(AlertType.ERROR, "ID number not found or invalid!");
+                default -> showAlert(AlertType.ERROR, "Error Occured. Please try again later");
             }
             System.out.println("Response from server: " + response.toString());
             
-//           
-//            
-//            try(BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"))){
-//                
-//            }
         } catch (Exception ex) {
             System.out.println(ex);
         }
