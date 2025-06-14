@@ -29,11 +29,15 @@ public class CreateAccountAdminController {
 
     @FXML
     Label emailValidatetxt;
+    
+    @FXML
+    private final Gson gson = new Gson();
+    
     @FXML
     CheckBox termsCondition;
 
     String registerAPI = "http://localhost:4500/registerAdmin";
-    String validateInputAPI = "http://localhost:4500/validate/admin";
+    String validateInputAPI = "http://localhost:4500/validate/admin/sendOTP";
 
     @FXML
     public void initialize() {
@@ -118,7 +122,7 @@ public class CreateAccountAdminController {
                 Parent root = loader.load();
 
                 EmailVerificationController controller = loader.getController();
-                controller.setPendingAdmin(new PendingAdmin(name, idnumber, email, password));
+                controller.setPendingAdmin(new PendingAdmin(name, idnumber, email, password, registerAPI));
 
                 Stage stage = new Stage();
                 stage.setTitle("Email Verification");
@@ -133,13 +137,13 @@ public class CreateAccountAdminController {
 
     }
 
-    public void adminRegisterService(String name, String idnumber, String email, String password) {
+    public void adminRegisterService(String name, String idnumber, String email, String password, String otp, String apiUrl) {
         try {
             String json = String.format(
-                    "{\"name\":\"%s\", \"id_number\":\"%s\", \"email\":\"%s\", \"password\":\"%s\"}",
-                    name, idnumber, email, password
+                    "{\"name\":\"%s\", \"id_number\":\"%s\", \"email\":\"%s\", \"password\":\"%s\", \"otp\":\"%s\"}",
+                    name, idnumber, email, password, otp
             );
-            URL url = new URL(registerAPI);
+            URL url = new URL(apiUrl);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
             conn.setRequestMethod("POST");
